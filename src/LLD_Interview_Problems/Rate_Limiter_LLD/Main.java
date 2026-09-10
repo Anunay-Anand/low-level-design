@@ -1,4 +1,4 @@
-package LLD_Interview_Problems.Parking_Lot.Rate_Limiter;
+package LLD_Interview_Problems.Rate_Limiter_LLD;
 
 public class Main {
     public static void main(String args[]) throws IllegalAccessException, InterruptedException {

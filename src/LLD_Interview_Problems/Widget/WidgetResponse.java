@@ -1,17 +1,39 @@
 package LLD_Interview_Problems.Widget;
 
-import LLD_Interview_Problems.Widget.Enums.RenderType;
-
-import java.util.UUID;
-
 public class WidgetResponse {
     private String widgetKey;
-    private RenderType layoutType;
+    private String layoutType;
     private Object data;
 
-    public WidgetResponse(String widgetKey, RenderType renderType, Object data) {
-        this.data = data;
-        this.widgetKey = widgetKey;
-        this.layoutType = renderType;
+    public WidgetResponse(widgetBuilder builder) {
+        this.widgetKey = builder.widgetKey;
+        this.layoutType = builder.layout;
+        this.data = builder.data;
+    }
+
+    public static class widgetBuilder {
+
+        private String widgetKey;
+        private String layout;
+        private Object data;
+
+        public widgetBuilder widgetKey(String widgetKey) {
+            this.widgetKey = widgetKey;
+            return this;
+        }
+
+        public widgetBuilder layout(String layout) {
+            this.layout = layout;
+            return this;
+        }
+
+        public widgetBuilder data(Object data) {
+            this.data = data;
+            return this;
+        }
+
+        public WidgetResponse build() {
+            return new WidgetResponse(this);
+        }
     }
 }

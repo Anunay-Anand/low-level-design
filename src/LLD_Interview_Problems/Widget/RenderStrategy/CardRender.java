@@ -7,6 +7,8 @@ import LLD_Interview_Problems.Widget.WidgetResponse;
 public class CardRender implements WidgetRender {
     @Override
     public WidgetResponse render(String widgetKey, WidgetData data) {
-        return new WidgetResponse(widgetKey, RenderType.CARD, data.getItems());
+        return new WidgetResponse.widgetBuilder()
+                .widgetKey(widgetKey).layout("CARD")
+                .data(data.getItems()).build();
     }
 }

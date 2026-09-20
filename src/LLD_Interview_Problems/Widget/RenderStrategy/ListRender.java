@@ -7,6 +7,10 @@ import LLD_Interview_Problems.Widget.WidgetResponse;
 public class ListRender implements WidgetRender {
     @Override
     public WidgetResponse render(String widgetKey, WidgetData data) {
-        return new WidgetResponse(widgetKey, RenderType.LIST, String.join(",", data.getItems()));
+          return new WidgetResponse.widgetBuilder()
+                  .widgetKey(widgetKey)
+                  .layout("LIST")
+                  .data(String.join(",", data.getItems()))
+                  .build();
     }
 }

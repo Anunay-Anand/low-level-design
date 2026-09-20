@@ -1,9 +1,6 @@
 package LLD_Interview_Problems.Widget;
 
-import LLD_Interview_Problems.Widget.Enums.RenderType;
 import LLD_Interview_Problems.Widget.IntegrationAdapters.IntegrationAdapter;
-import LLD_Interview_Problems.Widget.IntegrationAdapters.RestIntegrationAdaptor;
-import LLD_Interview_Problems.Widget.RenderStrategy.CardRender;
 import LLD_Interview_Problems.Widget.RenderStrategy.RenderFactory;
 import LLD_Interview_Problems.Widget.RenderStrategy.WidgetRender;
 
